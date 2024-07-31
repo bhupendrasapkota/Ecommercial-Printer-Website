@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printer - Online Shopping Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <section id="header">
+    <a href="#"><img src="image/logo-printer_store.svg" class="logo" height="100px" alt=""></a>
+    <div>
+      <!-- Navigation menu -->
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a class="active" href="signin.html">Sign In</a></li>
+        <!-- Shopping cart icon with a close button -->
+        <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <!-- Mobile menu with shopping cart icon and menu icon doesn't work -->
+      <a href="craft.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <i id="bar" class="far fa-outdent"></i>
+    </div>
+  </section>
+
+  <div class="wrapper">
+    <h1>Login</h1>
+    <form>
+      <input type="text" id="username" placeholder="Enter username"> <!-- Input field for username -->
+      <input type="password" id="password" placeholder="Password"> <!-- Input field for password -->
+      <p class="recover">
+        <a href="#">Recover Password</a>
+      </p>
+    </form>
+    <button onclick="authenticateUser()">Sign in</button> <!--use of java-->
+    <p class="or">----- or continue with -----</p>
+    <div class="icons">
+      <i class="fab fa-google"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+    <div class="not-member">
+      Not a member? <a href="signup.html">Register Now</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="Col">
+      <h4>Contact</h4>
+      <p><strong>Address: </strong>Itahari-5, Halgada</p>
+      <p><strong>Phone: </strong>+977 982837276117</p>
+      <p><strong>Email: </strong>printnova@gmail.com</p>
+      <p><strong>Hours: </strong>8:00 A.M - 6:00 P.M, Sun-Sat</p>
+    </div>
+
+    <div class="Col">
+      <h4>About</h4>
+      <a href="#">About Us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="Col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col">
+      <h4>We accept.</h4>
+      <img src="image/secure2.png" height="100cm">
+    </div>
+
+    <div class="follow">
+      <h4>Follow Us</h4>
+      <div class="Icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagam"></i>
+        <i class="fab fa-pinterest-p"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-tiktok"></i>
+      </div>
+      <br>
+      <div class="copyright">
+        <p>©️ 2023, Printer store</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

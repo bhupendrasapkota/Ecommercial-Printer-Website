@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer - Online Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="image/logo-printer_store.svg" class="logo" height="100px" alt=""></a>
+        <div>
+            <!-- Navigation menu -->
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Prooucts</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a class="active" href="signin.html">Sign In</a></li>
+                <!-- Shopping cart icon with a close button -->
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <!-- Mobile menu with shopping cart icon and menu icon doesn't work -->
+            <a href="craft.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="far fa-outdent"></i>
+        </div>
+    </section>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <form>
+            <input type="text" placeholder="Enter username">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <p class="recover">
+                <a href="#">Forgot Password?</a>
+            </p>
+        </form>
+        <button onclick="signUpUser()">Sign Up</button>
+        <p class="or">
+            ----- or signup with -----
+        </p>
+        <div class="icons">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+        <div class="not-member">
+            Already a member? <a href="signin.html">Sign In</a>
+        </div>
+    </div>
+    <script>
+        // JavaScript function to be called on "Sign Up" button click
+        function signUpUser() {
+            alert("User signed up successfully!");
+        }
+    </script>
+</body>
+
+</html>

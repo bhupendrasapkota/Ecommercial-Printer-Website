@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Variables */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+        /* Reset Styles */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: hsl(29, 100%, 99%);
+        }
+
+        /* Links Styles */
+        a {
+            text-decoration: none;
+        }
+
+        /* List Styles */
+        ul {
+            list-style: none;
+        }
+
+        /* Image Styles */
+        image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: bisque;
+            border-radius: 10px;
+        }
+
+        /* Card Styles */
+        .container {
+            height: 60vh;
+            margin-inline: 1.5rem;
+            display: flex;
+            margin: 10px;
+            place-items: center;
+        }
+
+        .card {
+            margin: 30px;
+            position: relative;
+            width: 1050px;
+            height: 460px;
+            background-color: hsl(248, 13%, 12%);
+            padding: 1.25rem 2rem 3rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 16px hsla(205, 51%, 39%, 0.2);
+        }
+
+        .cardimage {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .cardborder {
+            width: 110px;
+            height: 110px;
+            border: 2px solid hsl(29, 80%, 58%);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 0.75rem;
+        }
+
+        .cardname {
+            color: hsl(151, 54%, 46%);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .cardprofession {
+            color: hsl(37, 50%, 38%);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .cardsocial {
+            width: 200px;
+            background-color: hsl(29, 80%, 58%);
+            padding: 0.75rem;
+            border-radius: 3rem;
+            text-align: initial;
+            box-shadow: 0 8px 24px hsla(29, 36%, 62%, 0.3);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1.75rem;
+            margin: 0 auto;
+            overflow: hidden;
+            transform-origin: 18px 17px;
+        }
+
+        .cardsocial-control {
+            position: relative;
+            transform-origin: 18px 18px;
+            transition: transform 0.45s ease;
+            transform: rotate(0);
+        }
+
+        .cardsocial-toggle {
+            display: inline-flex;
+            background-color: hsl(29, 16%, 10%);
+            color: hsl(29, 81%, 46%);
+            font-size: 1.25rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cardsocial-text {
+            display: block;
+            color: hsl(29, 16%, 10%);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .cardsocial-list {
+            display: inline-flex;
+            column-gap: 0.75rem;
+            transform: rotate(135deg);
+            transform-origin: 18px 17px;
+        }
+
+        .cardsocial-link {
+            display: inline-flex;
+            background-color: hsl(29, 80%, 70%);
+            color: hsl(29, 16%, 10%);
+            font-size: 1.25rem;
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .cardsocial-text,
+        .cardsocial-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-left: 3.1rem;
+        }
+
+        .cardsocial-text {
+            top: 0.5rem;
+        }
+
+        .animation .cardsocial-control {
+            transform: rotate(-135deg);
+        }
+
+        .cardsocial.animation {
+            animation: up-animation 1s ease-in-out forwards;
+        }
+
+        /* Defines the keyframes for the up-animation */
+        @keyframes up-animation {
+
+            0%,
+            100% {
+                /* At the start and end of the animation, the rotation is 0 degrees */
+                transform: rotate(0);
+            }
+
+            50%,
+            60% {
+                /* At the midpoint of the animation, the rotation is -3 degrees */
+                transform: rotate(-3deg);
+            }
+
+            88% {
+                /* At 88% of the animation, the rotation is 1 degree */
+                transform: rotate(1deg);
+            }
+        }
+
+        /* Applies the up-animation to elements with the class "cardsocial" and the "down-animation" class */
+        .cardsocial.down-animation {
+            animation: down-animation 1s ease-in-out forwards;
+        }
+
+        /* Defines the keyframes for the down-animation */
+        @keyframes down-animation {
+
+            0%,
+            100% {
+                /* At the start and end of the animation, the rotation is 0 degrees */
+                transform: rotate(0);
+            }
+
+            50%,
+            60% {
+                /* At the midpoint of the animation, the rotation is 6 degrees */
+                transform: rotate(6deg);
+            }
+
+            88% {
+                /* At 88% of the animation, the rotation is -1 degree */
+                transform: rotate(-1deg);
+            }
+        }
+
+        /* Defines the styles for elements with the class "about-1" */
+        .about-1 {
+            width: 100px;
+            border-radius: 50px;
+            margin: 2px;
+            padding: 8px;
+            background-color: hsl(29, 80%, 58%);
+            border-color: black;
+            justify-content: center;
+            /* Centers the content horizontally */
+            font-family: "Poppins", sans-serif;
+            display: inline-flex;
+            /* Displays the element as an inline-level flex container */
+            font-weight: 500;
+            /* Sets the font weight of the text */
+            cursor: pointer;
+            /* Changes the cursor to a pointer when hovering over the element */
+            position: relative;
+            /* Positions the element  80%, 58%); /* Sets the background color of the element */
+        }
+
+        .about-me {
+            text-align: center;
+            padding: 10px;
+            color: black;
+            background-color: hsl(29, 80%, 58%);
+            font-family: "Poppins", sans-serif;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body></body>
+<section id="header">
+    <a href="#"><img src="image/logo-printer_store.svg" class="logo" height="100px" alt=""></a>
+    <div>
+        <!-- Navigation menu -->
+        <ul id="navbar">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a class="active" href="portfolio.html">Portfolio</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <!-- Shopping cart icon with a close button -->
+            <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+    <div id="mobile">
+        <!-- Mobile menu with shopping cart icon and menu icon doesen't work -->
+        <a href="craft.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <i id="bar" class="far fa-outdent"></i>
+    </div>
+</section>
+<section>
+    <h1>Our Team</h1>
+</section>
+<div class="container">
+
+    <!-- First Profile Card -->
+    <div class="card">
+        <div class="cardborder">
+            <image src="Image/nikita.png" alt="card image" class="cardimage">
+        </div>
+
+        <h3 class="cardname">Nikita Gauli</h3>
+        <span class="cardprofession">Product Manager</span>
+        <br>
+        <div class="about-1">About Me</div>
+        <p class="about-me">Hi I'm Nikita, a Product Manager who loves turning ideas into real and impactful
+            solutions. A passionate Product Manager turning ideas into impactful solutions.
+        </p>
+
+        <div class="cardsocial" id="card-social-1">
+            <div class="cardsocial-control">
+                <!-- Toggle button -->
+                <div class="cardsocial-toggle" id="card-toggle-1">
+                    <i class="ri-add-line"></i>
+                </div>
+
+                <span class="cardsocial-text">My social networks</span>
+
+                <!-- Card social -->
+                <ul class="cardsocial-list">
+                    <a href="https://www.facebook.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-facebook-line"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Profile Card -->
+    <div class="card">
+        <div class="cardborder">
+            <image src="Image/Pawal-modified.png" alt="card image" class="cardimage">
+        </div>
+
+        <h3 class="cardname">Pawal Karkidholi</h3>
+        <span class="cardprofession">Frontend and UX/UI Developer</span>
+        <br>
+        <div class="about-1">About Me</div>
+        <p class="about-me">Hello! Myself Pawal a passionate Frontend and UX/UI Developer dedicated to
+            creating seamless and visually appealing digital experiences. You can reach me on  </p>
+
+        <div class="cardsocial" id="card-social-2">
+            <div class="cardsocial-control">
+                <!-- Toggle button -->
+                <div class="cardsocial-toggle" id="card-toggle-2">
+                    <i class="ri-add-line"></i>
+                </div>
+
+                <span class="cardsocial-text">My social networks</span>
+
+                <!-- Card social -->
+                <ul class="cardsocial-list">
+                    <a href="https://www.instagram.com/pawal_karki/" target="_blank" class="cardsocial-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-linkedin-line"></i>
+                    </a>
+
+                    <a href="https://www.github.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Profile Card -->
+    <div class="card">
+        <div class="cardborder">
+            <image src="Image/Bhupendra.png" alt="card image" class="cardimage">
+        </div>
+
+        <h3 class="cardname">Bhupendra Sapkota</h3>
+        <span class="cardprofession">Frontend Developer </span>
+        <br>
+        <div class="about-1">About Me</div>
+        <p class="about-me">Hi,I am Bhupendra Sapkota,a frontend developer passionate about creating user-friendly
+            interfaces Using HTML and CSS.You can get connected with on different social media  </p>
+
+        <div class="cardsocial" id="card-social-3">
+            <div class="cardsocial-control">
+                <!-- Toggle button -->
+                <div class="cardsocial-toggle" id="card-toggle-3">
+                    <i class="ri-add-line"></i>
+                </div>
+
+                <span class="cardsocial-text">My social networks</span>
+
+                <!-- Card social -->
+                <ul class="cardsocial-list">
+                    <a href="https://www.facebook.com/bhupindra.sapkota.7" target="_blank" class="cardsocial-link">
+                        <i class="ri-facebook-line"></i>
+                    </a>
+
+                    <a href="https://www.github.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth Profile Card -->
+    <div class="card">
+        <div class="cardborder">
+            <image src="Image/rohan.png" alt="card image" class="cardimage">
+        </div>
+
+        <h3 class="cardname">Rohan Rai</h3>
+        <span class="cardprofession">Developer</span>
+        <br>
+        <div class="about-1">About Me</div>
+        <p class="about-me">Hello! I'm Rohan, a Developer passionate about building websites,UI/UX and little bit backend
+            solutions. I enjoy  optimizing code for efficiency. You can get connected me on  </p>
+
+        <div class="cardsocial" id="card-social-4">
+            <div class="cardsocial-control">
+                <!-- Toggle button -->
+                <div class="cardsocial-toggle" id="card-toggle-4">
+                    <i class="ri-add-line"></i>
+                </div>
+                <span class="cardsocial-text">My social networks</span>
+
+                <!-- Card social -->
+                <ul class="cardsocial-list">
+                    <a href="https://www.linkedin.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-linkedin-line"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="https://www.whatsapp.com/" target="_blank" class="cardsocial-link">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<section>
+    <footer class="section-p1">
+
+        <div class="Col">
+
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Itahari-5, Halgada</p>
+            <p><strong>Phone: </strong>+977 982837276117</p>
+            <p><strong>Email: </strong>printnova@gmail.com</p>
+            <p><strong>Hours: </strong>8:00 A.M - 6:00 P.M, Sun-Sat</p>
+
+        </div>
+
+
+
+
+        <div class="Col">
+
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+
+        </div>
+
+        <div class="Col">
+
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+
+        </div>
+
+        <div class="col">
+            <h4>We accept.</h4>
+            <img src="image/secure2.png" height="100cm">
+
+        </div>
+
+        <div class="follow">
+
+            <h4>Follow Us</h4>
+            <div class="Icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagam"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+
+            <br>
+
+            <div class="copyright">
+
+                <p>©️ 2023,Printer store</p>
+
+            </div>
+            <script src="script.js"></script>
+            </body>
+
+</html>

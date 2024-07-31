@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer - Online Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Set the background color of the body */
+        body {
+            background-color: hsla(192, 87%, 47%, 0.128);
+        }
+
+        .container {
+            margin: 10 auto;
+            /* Center the container horizontally with auto margin */
+            display: flex;
+            /* Use flex layout with a wrap to create a responsive design */
+            flex-flow: wrap;
+            justify-content: space-between;
+            /* Add space between items */
+            padding: 20px;
+            /* Add padding around the container */
+        }
+
+        .card {
+            /* Set the background color, border, padding, and border-radius for the card */
+            background-color: rgb(254, 254, 254);
+            border: 3px solid rgba(0, 0, 0, 0.942);
+            padding: 10px;
+            border-radius: 6%;
+            /* Add a box shadow for a subtle effect */
+            box-shadow: 5px 5px;
+            /* Set the width of the card */
+            width: 350px;
+        }
+
+        .card img {
+            /* Make the image fill the entire width with rounded corners */
+            width: 100%;
+            border-radius: 6%;
+        }
+
+        /* Style for the title text inside the card  */
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style for the button inside the card */
+        .button {
+            font-size: 15px;
+            /* Set font size, weight, border, background color, padding, and border-radius for the button */
+            font-weight: bold;
+            border: none;
+            background-color: hsl(47, 88%, 63%);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        /* Hover effect for the button */
+        .button:hover {
+            /* Change background color on hover */
+            background-color: hsl(44, 24%, 88%);
+            cursor: pointer;
+        }
+
+        /* Hover effect for the title text */
+        .title:hover {
+            color: hsl(47, 88%, 63%);
+            cursor: pointer;
+        }
+
+        /* Style for the footer container */
+        .footer-container {
+            background-color: white;
+            /* Set the background color of the footer */
+        }
+
+        /* Hover effect for the main container */
+        .container:hover {
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+        .container::after {
+            color: hsl(158, 45%, 37%);
+            /* Set the color for the '::after' pseudo-element */
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Set font family, size, and align items to center for paragraphs */
+            font-size: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <section id="header">
+        <a href="#"><img src="image/logo-printer_store.svg" class="logo" height="100px" alt=""></a>
+        <div>
+            <!-- Navigation menu -->
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a class="active" href="">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <!-- Shopping cart icon with a close button -->
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <!-- Mobile menu with shopping cart icon and menu icon doesn't work -->
+            <a href="craft.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="far fa-outdent"></i>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="card">
+                <img src="image/E-commerce-technology-trends.jpg" width=100%>
+                <button class="button" onclick="goToNextPage()">Learn More</button>
+                <p>Published 2024</p>
+                <div class="title"></div>
+                <p>Managing Technology: The Positive Impacts
+                    First of all,
+                    Let's discuss technology! It's common and speeds up life and improves business. But is everything
+                    rainbows and
+                    sunshine? This blog explores the good, bad, and ugly aspects of technology, examining how it impacts
+                    our day-to-day
+                    lives and even the printing industry. The Good Stuff: Technology is a speedy and easy-to-use tool,
+                    much like a superhero. It connects us,
+                    provides
+                    information on demand, and enhances our productivity. Businesses adore it as well—higher output,
+                    more astute
+                    decisions, and a ton more innovation. It's the contemporary equivalent of a high five!</p>
+            </div>
+
+            <div class="card">
+                <img src="image/Impact-of-ChatGPT-on-the-E-commerce-Industry.png" width="100%" alt="">
+                <button class="button" onclick="goToNextPage()">Learn More</button>
+                <p>Published 2024</p>
+                <div class="title"></div>
+                <p>The Bad Stuff: Don't worry, technology isn't flawless. Online criminals, privacy issues, and
+                    unequal access to
+                    digital resources are all present. Jobs can disappear, and the environment can a hit thanks to
+                    all
+                    those devices. It
+                    is comparable to having a superhero who errs from time to time.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/Impacts-of-eCommerce-Automation-feature-1024x647.jpg" width="100%" alt="">
+                <button class="button" onclick="goToNextPage()">Learn More</button>
+                <p>Published 2024</p>
+                <div class="title"></div>
+                <p>Impact of Daily Life on Business: Our day-to-day lives? Tech controls everything, including
+                    purchasing and
+                    interacting. It also changes the game in business. However, becoming digital is both cool
+                    and
+                    challenging in the
+                    printing industry. Sure, it's quick and inexpensive, but it upends the traditional printing
+                    process
+                    and raises
+                    concerns about the environment and jobs.
+            </div>
+
+            <div class="card">
+                <img src="image//technology+ecommerce.jpg" width="100%" alt="">
+                <button class="button" onclick="goToNextPage()">Learn More</button>
+                <p>Published 2024</p>
+                <div class="title"></div>
+                <p>technology is fantastic, but it also needs some downtime. The secret is to
+                    strike a
+                    balance between the
+                    good and the bad. While being tech-savvy is important, we also need to be aware of its
+                    drawbacks.
+                    The key to
+                    printing quickly and sustainably is to combine the old and the modern.
+                    Let's ride this technological wave together, even though we may have a few bumps.
+                    Being smart about
+                    it ensures we
+                    ride the tech wave without wiping out. Cheers to the digital adventure!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-container">
+        <footer class="section-p1">
+            <div class="Col">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>Itahari-5, Halgada</p>
+                <p><strong>Phone: </strong>+977 982837276117</p>
+                <p><strong>Email: </strong>printnova@gmail.com</p>
+                <p><strong>Hours: </strong>8:00 A.M - 6:00 P.M, Sun-Sat</p>
+            </div>
+
+            <div class="Col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="Col">
+                <h4>My Account</h4>
+                <a href="#" id="signInLink">Sign In</a>
+                <a href="#">View cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col">
+                <h4>We accept.</h4>
+                <img src="image/secure2.png" height="100cm">
+            </div>
+
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="Icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagam"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <br>
+                <div class="copyright">
+                    <p>©️ 2023, Printer store</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        function goToNextPage() {
+            location.href = "blog1.html";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

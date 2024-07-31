@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer - Online Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Style for Image Section */
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 650px;
+            margin: 5px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer{
+        background-color: white;
+        padding: 20px;
+        }
+  
+    </style>
+</head>
+
+<body>
+    <!-- Logo and Navigation Menu Section -->
+    <section id="header">
+        <a href="#"><img src="image/logo-printer_store.svg" class="logo" height="100px" alt=""></a>
+        <div>
+            <!-- Navigation menu -->
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="research.html">Research</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <!-- Shopping cart icon with a close button -->
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <!-- Mobile menu with shopping cart icon and menu icon doesen't work -->
+            <a href="craft.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="far fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <img src="image/amazon.png" alt="Image 1">
+        <img src="image/daraz.png" alt="Image 2">
+        <img src="image/ebay.png" alt="Image 3">
+        <img src="image/bestbuy.png" alt="Image 3">
+    </section>
+    <h2>Website Design Comparison</h2>
+    <!-- Comparison Table Section -->
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Our Website</th>
+                <th>Competitor Amazon</th>
+                <th>Competitor Daraz</th>
+                <th>Competitor Ebay </th>
+                <th>Competitor Best Buy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Overall Design</td>
+                <td>Minimalist design with a clean layout but lacks modern aesthetics.</td>
+                <td>Sleek and modern design, user-friendly interface.</td>
+                <td>Visually appealing design with intuitive navigation.</td>
+                <td>Professional and polished design, easy to navigate.</td>
+                <td>Modern and visually appealing design with a focus on product showcase and customer reviews.</td>
+            </tr>
+            <tr>
+                <td>JavaScript Implementation</td>
+                <td>Limited use of JavaScript, impacting dynamic features.</td>
+                <td>Utilizes advanced JavaScript for interactive and dynamic elements.</td>
+                <td>Smooth integration of JavaScript for enhanced user experience.</td>
+                <td>Well-implemented JavaScript for seamless interactivity.</td>
+                <td>Advanced JavaScript for interactive features, smooth transitions, and personalized product
+                    suggestions.</td>
+            </tr>
+            <tr>
+                <td>Shopping Cart</td>
+                <td>Basic cart functionality; lacks features like save for later, discount codes, and visual indicators.
+                </td>
+                <td>Robust shopping cart system with multiple features and a visually appealing interface.</td>
+                <td>Comprehensive cart with quick view options, discount code support, and saved items.</td>
+                <td>Efficient shopping cart system with a seamless checkout process.Also show the discounted rate which
+                    can easily attract the customers</td>
+                <td>Powerful search with filters, sorting, and autocomplete for a seamless experience with extensive
+                    product catalog.</td>
+            </tr>
+            <tr>
+                <td>Search Functionality</td>
+                <td>No dedicated search button; basic search functionality. So, we can't search for the desire printer
+                    model number which is time-consuming.</td>
+                <td>Advanced search with filters, predictive search, and category suggestions.</td>
+                <td>Quick and efficient search with filters for a refined user experience.</td>
+                <td>Smart search functionality with instant results and filter options.Here we can search the brand of
+                    website which is lack in our website </td>
+                <td>Advanced shopping cart with features like order tracking, personalized recommendations, and easy
+                    checkout.</td>
+            </tr>
+            <tr>
+                <td>Product Pages</td>
+                <td>Product pages lack detailed information and high-quality images.</td>
+                <td>Detailed product information, high-resolution images, and customer reviews.</td>
+                <td>Informative product pages with specifications, reviews, and related products.</td>
+                <td>Well-organized product pages, showcasing features, specifications, and customer feedback.</td>
+                <td>Powerful search with filters, sorting, and autocomplete for a seamless experience with extensive
+                    product catalog.</td>
+
+            </tr>
+            <tr>
+                <td>Mobile Responsiveness</td>
+                <td>Since we have no use media query for this project so there is all laggy experience in mobile usages.
+                </td>
+                <td>Fully responsive design, providing a seamless experience across devices.</td>
+                <td>Adaptive design ensuring optimal performance on various screen sizes.</td>
+                <td>Mobile-friendly layout with smooth navigation and functionality.</td>
+                <td>No details about mobile Responsiveness</td>
+            </tr>
+            <tr>
+                <td>Loading Speed</td>
+                <td>Average loading speed; delays in loading product images and pages.</td>
+                <td>Fast loading times with optimized images and content delivery.</td>
+                <td>Quick loading speeds, minimizing user wait times.</td>
+                <td>High-speed performance, ensuring a smooth browsing experience.</td>
+                <td>Slow loading times for a seamless browsing and shopping experience, bad user experience.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Footer Section -->
+    <footer class="section-p1">
+        <div class="Col">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Itahari-5, Halgada</p>
+            <p><strong>Phone: </strong>+977 982837276117</p>
+            <p><strong>Email: </strong>printnova@gmail.com</p>
+            <p><strong>Hours: </strong>8:00 A.M - 6:00 P.M, Sun-Sat</p>
+        </div>
+
+        <section>
+        </section>
+
+        <div class="Col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="Col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>We accept.</h4>
+            <img src="image/secure2.png" height="100cm">
+        </div>
+
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="Icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+            <br>
+            <div class="copyright">
+                <p>©️ 2023, Printer store</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="script.js"></script>
