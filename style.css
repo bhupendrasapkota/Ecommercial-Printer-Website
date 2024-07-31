@@ -86,6 +86,7 @@ body {
 /* Header styles */
 #header {
     /* Header container styles */
+    position:sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
