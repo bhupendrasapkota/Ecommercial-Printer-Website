@@ -150,7 +150,7 @@ body {
 /* Home page styles */
 #hero {
     /* Hero section styles */
-    background-image: url("/Image/hello.jpg");
+    background-image: url("./Image/hello.jpg");
     height: 90vh;
     width: 100%;
     background-size: cover;
